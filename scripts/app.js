@@ -86,9 +86,9 @@ const clear = () => {
     NumberInput.focus();
 };
 //get results from localstorage when page loads
-const storage_res = JSON.parse(localStorage.getItem('results') || '');
-if (storage_res !== undefined) {
-    result_list = storage_res;
+const storage_res = (localStorage.getItem('results'));
+if (storage_res) {
+    result_list = JSON.parse(storage_res);
     renderResult();
 }
 Buttons[0].addEventListener('click', division);

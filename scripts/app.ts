@@ -106,9 +106,9 @@ const clear=()=>{
   }
 
   //get results from localstorage when page loads
-  const storage_res:Result_Item[]=JSON.parse(localStorage.getItem('results')||'');
-  if(storage_res!==undefined){
-      result_list=storage_res;
+  const storage_res=(localStorage.getItem('results'));
+  if(storage_res){
+      result_list=JSON.parse(storage_res);
       renderResult();
   }
 
