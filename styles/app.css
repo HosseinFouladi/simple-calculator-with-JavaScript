@@ -1,0 +1,211 @@
+:root{
+    --glass-gray:rgba(0,0,0,0.6);
+    --bg-color:rgba(0,0,0,0.2);
+    --light-gray:rgba(255,255,255,0.7);
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.calculator{
+
+    border-radius: 5px;
+    border: 2px solid gray;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.input-box{
+    width: 100%;
+    flex: 1;
+}
+input{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+input:focus{
+   outline: none;
+}
+.result{
+    flex: 4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:5px 5px ;
+    background-color: var(--light-gray);
+    overflow: auto;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    flex: 1;
+    color:blue ;
+}
+
+ul{
+     flex:8;
+     width: 100%;
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     overflow: auto;
+}
+li{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+  
+}
+i{
+    color: red;
+    cursor: pointer;
+}
+.operation{
+    background-color: var(--light-gray);
+    flex: 2;
+    width: 100%;
+    display: grid;
+    grid-template:repeat(4,1fr)/repeat(4,1fr);
+    justify-content: center;
+
+ 
+
+}
+button{
+
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsive*/
+@media (max-width:600px) {
+   .calculator{
+    width: 70%;
+    height: 80%;
+   }
+   input{
+    font-size:1.6rem;
+    padding: 5px .6rem;
+   }
+   .title{
+    font-size: 1.6rem;
+   }
+   li{
+    padding: .5rem .6rem;
+    font-size: 1.4rem;
+   }
+   button{
+    
+    font-size: 2rem;
+   }
+}
+
+@media (min-width:600px) {
+    .calculator{
+        width: 70%;
+        height: 80%;
+       }
+       input{
+        font-size: 1.8rem;
+        padding: 5px .8rem;
+       }
+       .title{
+        font-size: 1.8rem;
+       }
+       li{
+        padding: .5rem 1rem;
+        font-size: 1.6rem;
+       }
+       button{
+        font-size: 2.5rem;
+       }
+}
+
+@media (min-width:992px) {
+    .calculator{
+        width: 60%;
+        height: 80%;
+       }
+       input{
+        font-size: 2rem;
+        padding: 5px 1rem;
+       }
+       .title{
+        font-size: 2rem;
+       }
+       li{
+        padding: 1rem 1rem;
+        font-size: 1.8rem;
+       }
+       button{
+     
+        font-size: 3rem;
+       }
+
+}
+
+@media (min-width:1400px) {
+    .calculator{
+        width: 50%;
+        height: 80%;
+       }
+       input{
+        font-size: 2rem;
+        padding: 5px 1.5rem;
+       }
+       .title{
+        font-size: 2.2rem;
+       }
+       li{
+        padding: 1.5rem 1.2rem;
+        font-size: 2rem;
+       }
+       button{
+    
+        font-size: 3.5rem;
+       }
+}
